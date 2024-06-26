@@ -1,24 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import {
+  acbMatrix,
+  abcdMatrix,
+  acbLetterTurnMatrix,
+  gooniesMatrix,
+  blahMatrix,
+  ignoreMatrix,
+} from "./constants/matrices";
+import MatrixView from "./components/MatrixView/MatrixView";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MatrixView title={"acbMatrix"} matrix={acbMatrix} />
+      <MatrixView title={"abcdMatrix"} matrix={abcdMatrix} />
+      <MatrixView title={"acbLetterTurnMatrix"} matrix={acbLetterTurnMatrix} />
+      <MatrixView title={"gooniesMatrix"} matrix={gooniesMatrix} />
+      <MatrixView title={"blahMatrix"} matrix={blahMatrix} />
+      <MatrixView title={"ignoreMatrix"} matrix={ignoreMatrix} />
     </div>
   );
 }
